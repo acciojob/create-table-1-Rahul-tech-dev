@@ -7,6 +7,6 @@ function insert_Row() {
 	cell1.textContent="New Cell1";
 	let cell2 = document.createElement("td");
     cell2.textContent = "New Cell2";
-	document.querySelector("#sampleTable").appendChild(newrow);
-  
+	let table=document.querySelector("#sampleTable");
+	table.insertBefore(newrow,table.firstChild);
 }
