@@ -1,12 +1,21 @@
+
 function insert_Row() {
-    //Write your code here
-   
-	
-   let newrow=document.createElement("tr");
-	let cell1=document.createElement("td");
-	cell1.textContent="New Cell1";
-	let cell2 = document.createElement("td");
+
+    let newrow = document.createElement("tr");
+
+    let cell1 = document.createElement("td");
+    let cell2 = document.createElement("td");
+
+    cell1.textContent = "New Cell1";
     cell2.textContent = "New Cell2";
-	let table=document.querySelector("#sampleTable");
-	table.insertBefore(newrow,table.firstChild);
+
+    newrow.appendChild(cell1);
+    newrow.appendChild(cell2);
+
+    let table = document.getElementById("sampleTable");
+
+    // Insert before the first table row
+    table.insertBefore(newrow, table.rows[0]);
+
 }
+
